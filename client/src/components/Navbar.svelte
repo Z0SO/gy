@@ -10,8 +10,8 @@
 <nav>
     <ul>
         <li><a href="/">Inicio</a></li>
-        <li><a href="/acerca">Acerca</a></li>
-        <li><a href="/contacto">Contacto</a></li>
+        <li><a href="/historias_clinicas">Historias Clínicas</a></li>
+        <li><a href="/historias_clinicas/create">Nueva Historia</a></li>
     </ul>
 </nav>
 
@@ -31,6 +31,5 @@
 
     a {
         color: white;
-        text-decoration: none;
     }
 </style>

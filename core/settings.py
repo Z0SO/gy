@@ -127,15 +127,11 @@ REST_FRAMEWORK = {
 }
 
 
-
+ALLOWED_HOSTS = ['*']
 
 if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
 
-    CORS_ALLOW_HEADERS = [
-        'content-type',
-        'authorization',
-    ]
 
     CORS_ALLOW_METHODS = [
         'GET',
