@@ -18,18 +18,17 @@
 
 <style>
     nav {
-        background-color: #333;
         color: white;
         padding: 0.5rem;
     }
 
     ul {
-        display: flex;
-        justify-content: space-around;
+        <!-- display: flex; -->
+        <!-- justify-content: space-around; -->
         list-style: none;
     }
 
     a {
-        color: white;
+        color: #000;
     }
 </style>

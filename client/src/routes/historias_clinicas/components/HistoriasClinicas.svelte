@@ -41,7 +41,7 @@ console.log(historias);
         </thead>
         <tbody>
             {#each historias as historia}
-                <tr>
+                <tr class="hoverHist">
                     <td>{historia.pac_dni}</td>
                     <td>{historia.pac_nombre}</td>
                     <td>{historia.pac_edad}</td>
@@ -66,3 +66,29 @@ console.log(historias);
 {:else}
     <p>No hay historias clínicas para mostrar</p>
 {/if}
+
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .hoverHist:hover {
+        background-color: #d1d1d1;
+    }
+</style>
