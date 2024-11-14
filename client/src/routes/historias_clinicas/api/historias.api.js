@@ -21,7 +21,7 @@ export const getHistorias = async () => {
     }
 }
 
-export const getHistoria = async (id) => {
+export const getHistoriaById = async (id) => {
     try {
         const response = await api.get(`/${id}`);
         return response.data;

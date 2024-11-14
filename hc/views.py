@@ -21,5 +21,4 @@ class ConsultaControlViewSet(viewsets.ModelViewSet):
     # Definimos el filtro de django para usarlo en el viewset
     filter_backends = [DjangoFilterBackend]
     
-    # Definimos los campos por los cuales se puede filtrar, en este caso por nombre del paciente y fecha de evaluación
-    filterset_fields = ['historia_clinica__pac_nombre', 'fecha_evaluacion']
+    filterset_fields = ['historia_clinica']  # Definimos los campos por los cuales se va a filtrar
