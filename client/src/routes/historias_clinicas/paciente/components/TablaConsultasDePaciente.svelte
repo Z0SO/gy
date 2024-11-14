@@ -14,6 +14,8 @@ export let consulta = [];
             <p>Indicaciones: {item.indicaciones}</p>
             <p>Historia clínica: {item.historia_clinica}</p>
             <p>CC Laboratorio: {item.cc_laboratorio}</p>
+
+            <p>Fecha de la consulta: <b>{item.fecha_evaluacion}</b></p>
         </div>
     {/each}
 {:else}

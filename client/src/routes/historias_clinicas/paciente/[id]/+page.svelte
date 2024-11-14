@@ -1,6 +1,8 @@
 <script>
 import { onMount } from 'svelte';
 
+import { goto } from '$app/navigation';
+
 // como vamos a usar la id que viene en la url, la traemos de la url
 import { page } from '$app/stores';
 
@@ -35,6 +37,9 @@ async function fetchHistoriaClinica() {
     console.log(una_historia_clinica);
 }
 
+function go_create_consulta() {
+    goto(`/historias_clinicas/paciente/nueva_consulta/${param_id}`);
+}
 
 // --- onMount
 onMount(() => {
@@ -45,12 +50,26 @@ onMount(() => {
 
 </script>
 
+<button
+    on:click={go_create_consulta}
+>
+   Nueva Consulta
+</button>
 
-<h3>Paciente ID {param_id}</h3>
 
 <TablaHistoriaClinicaDePaciente historia_clinica={una_historia_clinica} />
 
-<hr>
+<div>
+    separador de informacion
+</div>
 
 
 <TablaConsultasDePaciente consulta={una_consulta} />
+
+
+
+<style>
+div {
+    background-color: #02040f;
+}
+</style>
