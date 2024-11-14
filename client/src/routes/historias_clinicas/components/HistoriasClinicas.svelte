@@ -2,8 +2,13 @@
 
 import { onMount } from 'svelte';
 import { getHistorias } from '../api/historias.api.js';
+import { goto } from '$app/navigation';
 
 let historias = [];
+
+const irAHistoria = (id) => {
+    goto(`/historias_clinicas/paciente/${id}`);
+}
 
 onMount(
     async () => {
@@ -41,7 +46,10 @@ console.log(historias);
         </thead>
         <tbody>
             {#each historias as historia}
-                <tr class="hoverHist">
+                <tr 
+                on:click={() => irAHistoria(historia.id)}
+                class="hoverHist"
+                >
                     <td>{historia.pac_dni}</td>
                     <td>{historia.pac_nombre}</td>
                     <td>{historia.pac_edad}</td>
