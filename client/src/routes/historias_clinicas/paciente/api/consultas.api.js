@@ -25,7 +25,7 @@ export const getConsultas = async () => {
 }
 
 // Para obtener una consulta por id (cosa que si se va a usar y es crucial)
-export const getConsultasById = async (id) => {
+export const getConsultaById = async (id) => {
     try {
         const response = await api.get(`/${id}`);
         return response.data;
