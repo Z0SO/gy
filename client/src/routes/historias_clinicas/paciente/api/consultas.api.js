@@ -48,7 +48,7 @@ export const createConsulta = async (consulta) => {
 // Para actualizar una consulta desde el front
 export const updateConsulta = async (id, consulta) => {
     try {
-        const response = await api.put(`/${id}`, consulta);
+        const response = await api.put(`${id}/`, consulta);
         return response.data;
     } catch (error) {
         console.error(error);
@@ -58,7 +58,7 @@ export const updateConsulta = async (id, consulta) => {
 // Para borrar una consulta desde el front
 export const deleteConsulta = async (id) => {
     try {
-        const response = await api.delete(`/${id}`);
+        const response = await api.delete(`${id}/`);
         return response.data;
     } catch (error) {
         console.error(error);
