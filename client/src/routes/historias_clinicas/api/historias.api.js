@@ -41,7 +41,7 @@ export const createHistoria = async (historia) => {
 
 export const updateHistoria = async (id, historia) => {
     try {
-        const response = await api.put(`/${id}`, historia);
+        const response = await api.put(`/${id}/`, historia);
         return response.data;
     } catch (error) {
         console.error(error);
@@ -50,7 +50,7 @@ export const updateHistoria = async (id, historia) => {
 
 export const deleteHistoria = async (id) => {
     try {
-        const response = await api.delete(`/${id}`);
+        const response = await api.delete(`/${id}/`);
         return response.data;
     } catch (error) {
         console.error(error);
