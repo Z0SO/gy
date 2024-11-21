@@ -1,5 +1,4 @@
 <script>
-
 import { onMount } from 'svelte';
 import { getHistorias } from '../api/historias.api.js';
 import { goto } from '$app/navigation';

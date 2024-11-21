@@ -1,4 +1,5 @@
 <script>
+import AvancedTable from './components/AvancedTable.svelte';
 import HistoriasClinicas from './components/HistoriasClinicas.svelte';
 </script>
 
@@ -6,4 +7,8 @@ import HistoriasClinicas from './components/HistoriasClinicas.svelte';
     Historias Clínicas
 </h2>
 
+<!-- <AvancedTable /> -->
 <HistoriasClinicas />
+
+
+
