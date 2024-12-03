@@ -1,3 +1,4 @@
+
 <script>
   import { page } from '$app/stores';
   import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, P } from 'flowbite-svelte';
@@ -7,46 +8,54 @@
   let btnClass = 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2';
 </script>
 
-<Navbar 
-    class="bg-gray-200 m-0
->
-    <NavBrand href="/" class="flex-grow bg-red-600 items-center p-3 pl-6 m-0">
-        <span class="self-center whitespace-nowrap text-xl font-semibold text-green-600 uppercase dark:text-white">
-            Sistema HC
-        </span>
-    </NavBrand>
+<Navbar class="bg-gray-200 dark:bg-gray-800 shadow-lg p-0 rounded-b-lg">
+  <!-- Navbar Brand -->
+  <NavBrand href="/" class="flex items-center p-3 pl-6 ">
+    <span class="text-xl font-bold text-green-900 uppercase dark:text-white">
+      Sistema HC
+    </span>
+  </NavBrand>
 
-  <NavHamburger />
+  <!-- Hamburger for mobile -->
+  <NavHamburger class="lg:hidden text-white" />
 
-  <NavUl {activeUrl}
-    >
-    <NavLi href="/">
-           <P class="hover:text-green-500 font-semibold dark:hover:text-red-500">
-                Inicio
-            </P> 
-        </NavLi>
-    <NavLi href="/historias_clinicas">
-           <P class="hover:text-green-500 font-semibold dark:hover:text-red-500">
-                Historias Clinicas
-            </P> 
-        </NavLi>
-    <NavLi href="/historias_clinicas/create">
-           <P class="hover:text-green-500 font-semibold dark:hover:text-red-500">
-                Nueva Historia
-            </P> 
-        </NavLi>
-    <NavLi>
-        <DarkMode {btnClass} 
-            class="m-0 p-0 hover:bg-transparent hover:text-green-500 font-semibold dark:text-white dark:hover:text-red-500 dark:hover:bg-transparent" />
+  <!-- Navbar Links -->
+  <NavUl {activeUrl} class="flex items-center space-x-8 ml-auto transition-all ease-in-out duration-300">
+    <!-- Home Link -->
+    <NavLi href="/" class="relative">
+      <P class="font-medium text-gray-700 hover:text-green-500 dark:text-gray-200 dark:hover:text-red-500 transition-all pb-1 duration-300">
+        Inicio
+      </P>
+      {#if activeUrl === '/'}
+        <span class="absolute inset-x-0 bottom-0 h-1 bg-green-500 rounded-full dark:bg-red-500"></span>
+      {/if}
+    </NavLi>
+
+    <!-- Historias Clínicas Link -->
+    <NavLi href="/historias_clinicas" class="relative">
+      <P class="font-medium text-gray-700 hover:text-green-500 dark:text-gray-200 dark:hover:text-red-500 transition-all pb-1">
+        Historias Clínicas
+      </P>
+      {#if activeUrl === '/historias_clinicas'}
+        <span class="absolute inset-x-0 bottom-0 h-1 bg-green-500 rounded-full dark:bg-red-500"></span>
+      {/if}
+    </NavLi>
+
+    <!-- Nueva Historia Link -->
+    <NavLi href="/historias_clinicas/create" class="relative">
+      <P class="font-medium text-gray-700 hover:text-green-500 dark:text-gray-200 dark:hover:text-red-500 transition-all pb-1">
+        Nueva Historia
+      </P>
+      {#if activeUrl === '/historias_clinicas/create'}
+        <span class="absolute inset-x-0 bottom-0 h-1 bg-green-500 rounded-full dark:bg-red-500"></span>
+      {/if}
+    </NavLi>
+
+    <!-- Dark Mode Toggle -->
+    <NavLi class="flex items-center">
+      <DarkMode {btnClass} 
+        class="text-gray-500 dark:text-gray-400 hover:text-green-500 dark:hover:text-red-500 transition-all p-2 rounded-lg"
+      />
     </NavLi>
   </NavUl>
 </Navbar>
-<!-- <nav> -->
-<!--     <ul> -->
-<!--         <li><a href="/">Inicio</a></li> -->
-<!--         <li><a href="/historias_clinicas">Historias Clínicas</a></li> -->
-<!--         <li><a href="/historias_clinicas/create">Nueva Historia</a></li> -->
-<!--     </ul> -->
-<!-- </nav> -->
-
-
