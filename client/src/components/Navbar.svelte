@@ -8,10 +8,10 @@
   let btnClass = 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2';
 </script>
 
-<Navbar class="bg-gray-200 dark:bg-gray-800 shadow-lg p-0 rounded-b-lg">
+<Navbar class="bg-green-100 dark:bg-gray-800 shadow-lg p-0 ">
   <!-- Navbar Brand -->
   <NavBrand href="/" class="flex items-center p-3 pl-6 ">
-    <span class="text-xl font-bold text-green-900 uppercase dark:text-white">
+    <span class="text-xl font-bold text-black uppercase dark:text-white">
       Sistema HC
     </span>
   </NavBrand>
